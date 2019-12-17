@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoanService} from './loan.service'
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'credit';
+  constructor (
+    private loanService: LoanService
+
+  ){
+  this.loanService.getLoanDetails();
+  }
+  public data(){
+  
+  }
+
+
 }
